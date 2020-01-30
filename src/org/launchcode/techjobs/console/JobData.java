@@ -76,7 +76,7 @@ public class JobData {
 
             String aValue = row.get(column);
 
-            if (aValue.contains(value)) {
+            if (aValue.toUpperCase().contains(value.toUpperCase())) {
                 jobs.add(row);
             }
         }
@@ -133,7 +133,7 @@ public class JobData {
         for (HashMap<String, String> row : allJobs) {
 
             for (String aValue : row.values()) {
-                if (aValue.toLowerCase().contains(value)) {
+                if (aValue.toUpperCase().contains(value.toUpperCase())) {
                     jobs.add(row);
                 }
             }
